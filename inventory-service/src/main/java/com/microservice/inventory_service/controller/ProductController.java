@@ -1,6 +1,11 @@
 package com.microservice.inventory_service.controller;
 
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.microservice.inventory_service.dto.OrderRequestDto;
+import com.microservice.inventory_service.dto.OrderRequestItemDto;
 import com.microservice.inventory_service.dto.ProductDto;
 import com.microservice.inventory_service.service.Productservice;
 import jakarta.servlet.http.HttpServletRequest;
@@ -9,10 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestClient;
 
 import java.util.List;
@@ -26,6 +28,7 @@ public class ProductController {
     private final Productservice productService;
     private final DiscoveryClient discoveryClient;
     private final RestClient restClient;
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @GetMapping("/fetchOrders")
     public String fetchOrderService(HttpServletRequest httpServletRequest){
@@ -50,6 +53,26 @@ public class ProductController {
     public ResponseEntity<ProductDto> getInventoryById(@PathVariable Long id) {
         ProductDto inventory = productService.getProductById(id);
         return ResponseEntity.ok(inventory);
+    }
+
+    @PutMapping("/reduce-stocks")
+    public ResponseEntity<Double> reduceStock(@RequestBody JsonNode payload) {
+        try {
+            OrderRequestDto orderRequestDto;
+            if (payload.isArray()) {
+                List<OrderRequestItemDto> items = objectMapper.convertValue(payload, new TypeReference<List<OrderRequestItemDto>>() {});
+                orderRequestDto = new OrderRequestDto();
+                orderRequestDto.setItems(items);
+            } else {
+                orderRequestDto = objectMapper.treeToValue(payload, OrderRequestDto.class);
+            }
+
+            Double totalPrice = productService.reduceStocks(orderRequestDto);
+            return ResponseEntity.ok(totalPrice);
+        } catch (Exception ex) {
+            log.error("Failed to parse reduce-stocks payload", ex);
+            return ResponseEntity.badRequest().build();
+        }
     }
 
 }

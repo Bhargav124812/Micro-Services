@@ -1,6 +1,9 @@
 package com.microservice.order_service.service;
 
+import com.microservice.order_service.client.InventoryClient;
 import com.microservice.order_service.dto.OrderRequestDto;
+import com.microservice.order_service.entity.OrderItem;
+import com.microservice.order_service.entity.OrderStatus;
 import com.microservice.order_service.entity.Orders;
 import com.microservice.order_service.repository.OrderRepo;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +20,7 @@ import java.util.List;
 public class OrderService {
     private final OrderRepo orderRepository;
     private final ModelMapper modelMapper;
+    private final InventoryClient inventoryClient;
 
     public List<OrderRequestDto> getAllOrders() {
         log.info("Fetching all orders");
@@ -29,5 +33,20 @@ public class OrderService {
         log.info("Fetching order with ID: {}", id);
         Orders order = orderRepository.findById(id).orElseThrow(() -> new RuntimeException("Order not found"));
         return modelMapper.map(order, OrderRequestDto.class);
+    }
+
+    public OrderRequestDto createOrder(OrderRequestDto orderRequestDto) {
+        Double totalPrice = inventoryClient.reduceStocks(orderRequestDto);
+
+        Orders orders = modelMapper.map(orderRequestDto, Orders.class);
+        for(OrderItem orderItem: orders.getItems()) {
+            orderItem.setOrder(orders);
+        }
+        orders.setTotalPrice(totalPrice);
+        orders.setOrderStatus(OrderStatus.CONFIRMED);
+
+        Orders savedOrder = orderRepository.save(orders);
+
+        return modelMapper.map(savedOrder, OrderRequestDto.class);
     }
 }
