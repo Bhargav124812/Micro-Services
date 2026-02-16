@@ -3,7 +3,9 @@ package com.microservice.inventory_service.controller;
 
 import com.microservice.inventory_service.dto.ProductDto;
 import com.microservice.inventory_service.service.Productservice;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/products")
 @RequiredArgsConstructor
+@Slf4j
 public class ProductController {
 
     private final Productservice productService;
@@ -25,11 +28,13 @@ public class ProductController {
     private final RestClient restClient;
 
     @GetMapping("/fetchOrders")
-    public String fetchOrderService(){
+    public String fetchOrderService(HttpServletRequest httpServletRequest){
+
+        log.info(httpServletRequest.getHeader("x-custom-header"));
         ServiceInstance orderService= discoveryClient.getInstances("order-service").getFirst();
 
         return restClient.get()
-                .uri(orderService.getUri()+"/api/v1/orders/helloOrders")
+                .uri(orderService.getUri()+"/orders/core/helloOrders")
                 .retrieve()
                 .body(String.class);
     }
