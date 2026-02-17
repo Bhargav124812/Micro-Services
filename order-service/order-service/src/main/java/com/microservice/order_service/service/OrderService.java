@@ -6,6 +6,7 @@ import com.microservice.order_service.entity.OrderItem;
 import com.microservice.order_service.entity.OrderStatus;
 import com.microservice.order_service.entity.Orders;
 import com.microservice.order_service.repository.OrderRepo;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -35,6 +36,10 @@ public class OrderService {
         return modelMapper.map(order, OrderRequestDto.class);
     }
 
+
+    //    @Retry(name = "inventoryRetry", fallbackMethod = "createOrderFallback")
+    @CircuitBreaker(name = "inventoryCircuitBreaker", fallbackMethod = "createOrderFallback")
+//    @RateLimiter(name = "inventoryRateLimiter", fallbackMethod = "createOrderFallback")
     public OrderRequestDto createOrder(OrderRequestDto orderRequestDto) {
         Double totalPrice = inventoryClient.reduceStocks(orderRequestDto);
 
@@ -48,5 +53,10 @@ public class OrderService {
         Orders savedOrder = orderRepository.save(orders);
 
         return modelMapper.map(savedOrder, OrderRequestDto.class);
+    }
+    public OrderRequestDto createOrderFallback(OrderRequestDto orderRequestDto, Throwable throwable) {
+        log.error("Fallback occurred due to : {}", throwable.getMessage());
+
+        return new OrderRequestDto();
     }
 }
