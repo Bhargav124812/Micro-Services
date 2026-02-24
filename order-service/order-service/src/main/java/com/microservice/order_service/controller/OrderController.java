@@ -44,22 +44,8 @@ public class OrderController {
     }
 
     @PostMapping("/create-order")
-    public ResponseEntity<OrderRequestDto> createOrder(@RequestBody JsonNode payload) {
-        try {
-            OrderRequestDto orderRequestDto;
-            if (payload.isArray()) {
-                List<OrderRequestItemDto> items = objectMapper.convertValue(payload, new TypeReference<List<OrderRequestItemDto>>() {});
-                orderRequestDto = new OrderRequestDto();
-                orderRequestDto.setItems(items);
-            } else {
-                orderRequestDto = objectMapper.treeToValue(payload, OrderRequestDto.class);
-            }
-
-            OrderRequestDto orderRequestDto1 = orderService.createOrder(orderRequestDto);
-            return ResponseEntity.ok(orderRequestDto1);
-        } catch (Exception ex) {
-            log.error("Failed to parse create-order payload", ex);
-            return ResponseEntity.badRequest().build();
-        }
+    public ResponseEntity<OrderRequestDto> createOrder(@RequestBody OrderRequestDto orderRequestDto) {
+        OrderRequestDto orderRequestDto1 = orderService.createOrder(orderRequestDto);
+        return ResponseEntity.ok(orderRequestDto1);
     }
 }

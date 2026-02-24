@@ -56,23 +56,9 @@ public class ProductController {
     }
 
     @PutMapping("/reduce-stocks")
-    public ResponseEntity<Double> reduceStock(@RequestBody JsonNode payload) {
-        try {
-            OrderRequestDto orderRequestDto;
-            if (payload.isArray()) {
-                List<OrderRequestItemDto> items = objectMapper.convertValue(payload, new TypeReference<List<OrderRequestItemDto>>() {});
-                orderRequestDto = new OrderRequestDto();
-                orderRequestDto.setItems(items);
-            } else {
-                orderRequestDto = objectMapper.treeToValue(payload, OrderRequestDto.class);
-            }
-
-            Double totalPrice = productService.reduceStocks(orderRequestDto);
-            return ResponseEntity.ok(totalPrice);
-        } catch (Exception ex) {
-            log.error("Failed to parse reduce-stocks payload", ex);
-            return ResponseEntity.badRequest().build();
-        }
+    public ResponseEntity<Double> reduceStock(@RequestBody OrderRequestDto orderRequestDto) {
+        Double totalPrice = productService.reduceStocks(orderRequestDto);
+        return ResponseEntity.ok(totalPrice);
     }
 
 }
