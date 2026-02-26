@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
         <module name="eureka" />
+        <module name="git-config-server" />
       </profile>
       <profile name="Annotation profile for order-service" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -26,6 +27,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="eureka" options="-parameters" />
+      <module name="git-config-server" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
       <module name="order-service" options="-parameters" />
     </option>
