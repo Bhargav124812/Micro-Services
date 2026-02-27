@@ -7,7 +7,7 @@ spring:
         git:
           uri: https://github.com/Bhargav124812/git-configs
           username: Bhargav124812
-          password: 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
+          password: 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
           default-label: master
 
 server:
