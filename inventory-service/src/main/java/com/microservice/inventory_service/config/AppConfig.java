@@ -26,3 +26,4 @@ public class AppConfig {
         return new MicrometerCapability(registry);
     }
 }
+// 1CRVsclUNSzvPR5hDDkA

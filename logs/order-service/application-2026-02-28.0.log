@@ -1,0 +1,275 @@
+28-02-2026 15:49:06.354 [main] [-] INFO  order-service-c.m.o.OrderServiceApplication.logStarting - Starting OrderServiceApplication using Java 23 with PID 26112 (C:\Spring\eCommerce_\order-service\order-service\target\classes started by hp in C:\Spring\eCommerce_)
+28-02-2026 15:49:06.366 [main] [-] INFO  order-service-c.m.o.OrderServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+28-02-2026 15:49:06.641 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+28-02-2026 15:49:06.644 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=order-service, profiles=[default], label=null, version=2fc7e0e9cc8fe58af53ab266befadaa2c6905193, state=
+28-02-2026 15:49:10.212 [main] [-] INFO  order-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28-02-2026 15:49:10.724 [main] [-] INFO  order-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 471 ms. Found 1 JPA repository interface.
+28-02-2026 15:49:15.985 [main] [-] INFO  order-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=66b92b62-d7e0-371f-b8b7-6175c7812553
+28-02-2026 15:49:22.231 [main] [-] INFO  order-service-o.s.boot.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9020 (http)
+28-02-2026 15:49:22.360 [main] [-] INFO  order-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9020"]
+28-02-2026 15:49:22.492 [main] [-] INFO  order-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+28-02-2026 15:49:22.495 [main] [-] INFO  order-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/11.0.15]
+28-02-2026 15:49:26.288 [main] [-] INFO  order-service-o.s.b.w.c.s.WebApplicationContextInitializer.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 19629 ms
+28-02-2026 15:49:30.063 [main] [-] INFO  order-service-org.hibernate.orm.jpa.logPersistenceUnitInformation - HHH008540: Processing PersistenceUnitInfo [name: default]
+28-02-2026 15:49:30.430 [main] [-] INFO  order-service-org.hibernate.orm.core.logVersion - HHH000001: Hibernate ORM core version 7.2.1.Final
+28-02-2026 15:49:32.953 [main] [-] INFO  order-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+28-02-2026 15:49:33.088 [main] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+28-02-2026 15:49:33.691 [main] [-] INFO  order-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4fbdee7a
+28-02-2026 15:49:33.696 [main] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+28-02-2026 15:49:34.091 [main] [-] INFO  order-service-o.hibernate.orm.connections.pooling.logConnectionInfo - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/orderDB]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: orderDB/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+28-02-2026 15:49:36.775 [main] [-] INFO  order-service-org.hibernate.orm.core.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+28-02-2026 15:49:37.658 [main] [-] INFO  order-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-02-2026 15:49:38.499 [main] [-] INFO  order-service-o.s.d.j.r.q.QueryEnhancerFactories.<clinit> - Hibernate is in classpath; If applicable, HQL parser will be used.
+28-02-2026 15:49:39.538 [main] [-] WARN  order-service-o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-02-2026 15:49:40.100 [main] [-] INFO  order-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'inventory-service' URL not provided. Will try picking an instance via load-balancing.
+28-02-2026 15:49:50.368 [main] [-] INFO  order-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restClientDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestClient.
+28-02-2026 15:49:50.662 [main] [-] WARN  order-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+28-02-2026 15:49:50.752 [main] [-] INFO  order-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 26 endpoints beneath base path '/actuator'
+28-02-2026 15:49:51.080 [main] [-] INFO  order-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+28-02-2026 15:49:51.228 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+28-02-2026 15:49:51.250 [main] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 15:49:51.303 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+28-02-2026 15:49:51.305 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+28-02-2026 15:49:51.309 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+28-02-2026 15:49:51.315 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+28-02-2026 15:49:51.317 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+28-02-2026 15:49:51.320 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+28-02-2026 15:49:51.321 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+28-02-2026 15:49:52.567 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+28-02-2026 15:49:52.573 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+28-02-2026 15:49:52.579 [main] [-] INFO  order-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+28-02-2026 15:49:52.584 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1772273992583 with initial instances count: 3
+28-02-2026 15:49:52.621 [main] [-] INFO  order-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application ORDER-SERVICE with eureka with status UP
+28-02-2026 15:49:52.624 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1772273992624, current=UP, previous=STARTING]
+28-02-2026 15:49:52.632 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020: registering service...
+28-02-2026 15:49:52.710 [main] [-] INFO  order-service-o.s.boot.tomcat.TomcatWebServer.start - Tomcat started on port 9020 (http) with context path '/orders'
+28-02-2026 15:49:52.713 [main] [-] INFO  order-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9020
+28-02-2026 15:49:52.799 [main] [-] INFO  order-service-c.m.o.OrderServiceApplication.logStarted - Started OrderServiceApplication in 52.873 seconds (process running for 55.008)
+28-02-2026 15:49:52.800 [SpringApplicationShutdownHook] [-] INFO  order-service-o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application ORDER-SERVICE with eureka with status DOWN
+28-02-2026 15:49:52.801 [SpringApplicationShutdownHook] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1772273992801, current=DOWN, previous=UP]
+28-02-2026 15:49:52.810 [SpringApplicationShutdownHook] [-] INFO  order-service-o.s.boot.tomcat.GracefulShutdown.shutDownGracefully - Commencing graceful shutdown. Waiting for active requests to complete
+28-02-2026 15:49:52.833 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020 - registration status: 204
+28-02-2026 15:49:52.834 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020: registering service...
+28-02-2026 15:49:52.851 [tomcat-shutdown] [-] INFO  order-service-o.s.boot.tomcat.GracefulShutdown.doShutdown - Graceful shutdown complete
+28-02-2026 15:49:52.871 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020 - registration status: 204
+28-02-2026 15:49:52.880 [SpringApplicationShutdownHook] [-] INFO  order-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+28-02-2026 15:49:53.103 [SpringApplicationShutdownHook] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+28-02-2026 15:49:53.126 [SpringApplicationShutdownHook] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+28-02-2026 15:49:53.132 [SpringApplicationShutdownHook] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+28-02-2026 15:49:56.161 [SpringApplicationShutdownHook] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+28-02-2026 15:49:56.322 [SpringApplicationShutdownHook] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020 - deregister  status: 200
+28-02-2026 15:49:56.324 [SpringApplicationShutdownHook] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+28-02-2026 15:50:30.790 [main] [-] INFO  order-service-c.m.o.OrderServiceApplication.logStarting - Starting OrderServiceApplication using Java 23 with PID 28236 (C:\Spring\eCommerce_\order-service\order-service\target\classes started by hp in C:\Spring\eCommerce_)
+28-02-2026 15:50:30.798 [main] [-] INFO  order-service-c.m.o.OrderServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+28-02-2026 15:50:31.003 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+28-02-2026 15:50:31.004 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=order-service, profiles=[default], label=null, version=2fc7e0e9cc8fe58af53ab266befadaa2c6905193, state=
+28-02-2026 15:50:34.517 [main] [-] INFO  order-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28-02-2026 15:50:34.888 [main] [-] INFO  order-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 349 ms. Found 1 JPA repository interface.
+28-02-2026 15:50:35.957 [main] [-] INFO  order-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=66b92b62-d7e0-371f-b8b7-6175c7812553
+28-02-2026 15:50:38.081 [main] [-] INFO  order-service-o.s.boot.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9020 (http)
+28-02-2026 15:50:38.119 [main] [-] INFO  order-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9020"]
+28-02-2026 15:50:38.125 [main] [-] INFO  order-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+28-02-2026 15:50:38.126 [main] [-] INFO  order-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/11.0.15]
+28-02-2026 15:50:38.281 [main] [-] INFO  order-service-o.s.b.w.c.s.WebApplicationContextInitializer.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 7264 ms
+28-02-2026 15:50:39.581 [main] [-] INFO  order-service-org.hibernate.orm.jpa.logPersistenceUnitInformation - HHH008540: Processing PersistenceUnitInfo [name: default]
+28-02-2026 15:50:39.748 [main] [-] INFO  order-service-org.hibernate.orm.core.logVersion - HHH000001: Hibernate ORM core version 7.2.1.Final
+28-02-2026 15:50:40.732 [main] [-] INFO  order-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+28-02-2026 15:50:40.794 [main] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+28-02-2026 15:50:41.340 [main] [-] INFO  order-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b1d1558
+28-02-2026 15:50:41.346 [main] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+28-02-2026 15:50:41.659 [main] [-] INFO  order-service-o.hibernate.orm.connections.pooling.logConnectionInfo - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/orderDB]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: orderDB/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+28-02-2026 15:50:44.717 [main] [-] INFO  order-service-org.hibernate.orm.core.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+28-02-2026 15:50:44.867 [main] [-] INFO  order-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-02-2026 15:50:45.344 [main] [-] INFO  order-service-o.s.d.j.r.q.QueryEnhancerFactories.<clinit> - Hibernate is in classpath; If applicable, HQL parser will be used.
+28-02-2026 15:50:46.116 [main] [-] WARN  order-service-o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-02-2026 15:50:46.497 [main] [-] INFO  order-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'inventory-service' URL not provided. Will try picking an instance via load-balancing.
+28-02-2026 15:50:50.534 [main] [-] INFO  order-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restClientDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestClient.
+28-02-2026 15:50:50.721 [main] [-] WARN  order-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+28-02-2026 15:50:50.770 [main] [-] INFO  order-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 26 endpoints beneath base path '/actuator'
+28-02-2026 15:50:51.074 [main] [-] INFO  order-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+28-02-2026 15:50:51.151 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+28-02-2026 15:50:51.163 [main] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 15:50:51.184 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+28-02-2026 15:50:51.185 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+28-02-2026 15:50:51.186 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+28-02-2026 15:50:51.186 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+28-02-2026 15:50:51.186 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+28-02-2026 15:50:51.187 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+28-02-2026 15:50:51.187 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+28-02-2026 15:50:52.058 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+28-02-2026 15:50:52.066 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+28-02-2026 15:50:52.071 [main] [-] INFO  order-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+28-02-2026 15:50:52.074 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1772274052074 with initial instances count: 3
+28-02-2026 15:50:52.097 [main] [-] INFO  order-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application ORDER-SERVICE with eureka with status UP
+28-02-2026 15:50:52.099 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1772274052099, current=UP, previous=STARTING]
+28-02-2026 15:50:52.102 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020: registering service...
+28-02-2026 15:50:52.102 [main] [-] INFO  order-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9020"]
+28-02-2026 15:50:52.167 [main] [-] INFO  order-service-o.s.boot.tomcat.TomcatWebServer.start - Tomcat started on port 9020 (http) with context path '/orders'
+28-02-2026 15:50:52.168 [main] [-] INFO  order-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9020
+28-02-2026 15:50:52.228 [main] [-] INFO  order-service-c.m.o.OrderServiceApplication.logStarted - Started OrderServiceApplication in 29.018 seconds (process running for 30.724)
+28-02-2026 15:50:52.230 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020 - registration status: 204
+28-02-2026 15:50:56.118 [SpringApplicationShutdownHook] [-] INFO  order-service-o.s.c.n.e.s.EurekaServiceRegistry.deregister - Unregistering application ORDER-SERVICE with eureka with status DOWN
+28-02-2026 15:50:56.118 [SpringApplicationShutdownHook] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1772274056118, current=DOWN, previous=UP]
+28-02-2026 15:50:56.119 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020: registering service...
+28-02-2026 15:50:56.121 [SpringApplicationShutdownHook] [-] INFO  order-service-o.s.boot.tomcat.GracefulShutdown.shutDownGracefully - Commencing graceful shutdown. Waiting for active requests to complete
+28-02-2026 15:50:56.139 [tomcat-shutdown] [-] INFO  order-service-o.s.boot.tomcat.GracefulShutdown.doShutdown - Graceful shutdown complete
+28-02-2026 15:50:56.148 [SpringApplicationShutdownHook] [-] INFO  order-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+28-02-2026 15:50:56.169 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020 - registration status: 204
+28-02-2026 15:50:56.222 [SpringApplicationShutdownHook] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+28-02-2026 15:50:56.229 [SpringApplicationShutdownHook] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+28-02-2026 15:50:56.231 [SpringApplicationShutdownHook] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.shutdown - Shutting down DiscoveryClient ...
+28-02-2026 15:50:59.234 [SpringApplicationShutdownHook] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.unregister - Unregistering ...
+28-02-2026 15:50:59.256 [SpringApplicationShutdownHook] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.unregister - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020 - deregister  status: 200
+28-02-2026 15:50:59.256 [SpringApplicationShutdownHook] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.shutdown - Completed shut down of DiscoveryClient
+28-02-2026 15:51:07.721 [main] [-] INFO  order-service-c.m.o.OrderServiceApplication.logStarting - Starting OrderServiceApplication using Java 23 with PID 28724 (C:\Spring\eCommerce_\order-service\order-service\target\classes started by hp in C:\Spring\eCommerce_)
+28-02-2026 15:51:07.732 [main] [-] INFO  order-service-c.m.o.OrderServiceApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+28-02-2026 15:51:07.956 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Fetching config from server at : http://localhost:8888
+28-02-2026 15:51:07.957 [main] [-] INFO  order-service-o.s.c.c.c.ConfigServerConfigDataLoader.log - Located environment: name=order-service, profiles=[default], label=null, version=2fc7e0e9cc8fe58af53ab266befadaa2c6905193, state=
+28-02-2026 15:51:10.657 [main] [-] INFO  order-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28-02-2026 15:51:11.080 [main] [-] INFO  order-service-o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 400 ms. Found 1 JPA repository interface.
+28-02-2026 15:51:12.358 [main] [-] INFO  order-service-o.s.cloud.context.scope.GenericScope.setSerializationId - BeanFactory id=66b92b62-d7e0-371f-b8b7-6175c7812553
+28-02-2026 15:51:14.818 [main] [-] INFO  order-service-o.s.boot.tomcat.TomcatWebServer.initialize - Tomcat initialized with port 9020 (http)
+28-02-2026 15:51:14.845 [main] [-] INFO  order-service-o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-9020"]
+28-02-2026 15:51:14.850 [main] [-] INFO  order-service-o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+28-02-2026 15:51:14.851 [main] [-] INFO  order-service-o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/11.0.15]
+28-02-2026 15:51:15.020 [main] [-] INFO  order-service-o.s.b.w.c.s.WebApplicationContextInitializer.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 7054 ms
+28-02-2026 15:51:20.064 [main] [-] INFO  order-service-org.hibernate.orm.jpa.logPersistenceUnitInformation - HHH008540: Processing PersistenceUnitInfo [name: default]
+28-02-2026 15:51:20.984 [main] [-] INFO  order-service-org.hibernate.orm.core.logVersion - HHH000001: Hibernate ORM core version 7.2.1.Final
+28-02-2026 15:51:25.627 [main] [-] INFO  order-service-o.s.o.j.p.SpringPersistenceUnitInfo.addTransformer - No LoadTimeWeaver setup: ignoring JPA class transformer
+28-02-2026 15:51:25.945 [main] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+28-02-2026 15:51:27.126 [main] [-] INFO  order-service-com.zaxxer.hikari.pool.HikariPool.checkFailFast - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4eee730c
+28-02-2026 15:51:27.133 [main] [-] INFO  order-service-com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+28-02-2026 15:51:27.558 [main] [-] INFO  order-service-o.hibernate.orm.connections.pooling.logConnectionInfo - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/orderDB]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.0
+	Default catalog/schema: orderDB/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+28-02-2026 15:51:30.130 [main] [-] INFO  order-service-org.hibernate.orm.core.initiateService - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+28-02-2026 15:51:30.290 [main] [-] INFO  order-service-o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28-02-2026 15:51:30.571 [main] [-] INFO  order-service-o.s.d.j.r.q.QueryEnhancerFactories.<clinit> - Hibernate is in classpath; If applicable, HQL parser will be used.
+28-02-2026 15:51:31.745 [main] [-] WARN  order-service-o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28-02-2026 15:51:32.351 [main] [-] INFO  order-service-o.s.c.o.FeignClientFactoryBean.getTarget - For 'inventory-service' URL not provided. Will try picking an instance via load-balancing.
+28-02-2026 15:51:39.128 [main] [-] INFO  order-service-o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration.restClientDiscoveryClientOptionalArgs - Eureka HTTP Client uses RestClient.
+28-02-2026 15:51:39.325 [main] [-] WARN  order-service-o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.afterPropertiesSet - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+28-02-2026 15:51:39.394 [main] [-] INFO  order-service-o.s.b.a.e.web.EndpointLinksResolver.<init> - Exposing 26 endpoints beneath base path '/actuator'
+28-02-2026 15:51:39.668 [main] [-] INFO  order-service-o.s.c.n.eureka.InstanceInfoFactory.create - Setting initial instance status as: STARTING
+28-02-2026 15:51:39.747 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.<init> - Initializing Eureka in region us-east-1
+28-02-2026 15:51:39.757 [main] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 15:51:39.788 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Disable delta property : false
+28-02-2026 15:51:39.788 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Single vip registry refresh property : null
+28-02-2026 15:51:39.788 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Force full registry fetch : false
+28-02-2026 15:51:39.789 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application is null : false
+28-02-2026 15:51:39.789 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Registered Applications size is zero : true
+28-02-2026 15:51:39.789 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.fetchRegistry - Application version is -1: true
+28-02-2026 15:51:39.790 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - Getting all instance registry info from the eureka server
+28-02-2026 15:51:40.871 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry - The response status is 200
+28-02-2026 15:51:40.880 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.initScheduledTasks - Starting heartbeat executor: renew interval is: 30
+28-02-2026 15:51:40.888 [main] [-] INFO  order-service-c.n.discovery.InstanceInfoReplicator.<init> - InstanceInfoReplicator onDemand update allowed rate per min is 4
+28-02-2026 15:51:40.892 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.<init> - Discovery Client initialized at timestamp 1772274100891 with initial instances count: 3
+28-02-2026 15:51:40.930 [main] [-] INFO  order-service-o.s.c.n.e.s.EurekaServiceRegistry.register - Registering application ORDER-SERVICE with eureka with status UP
+28-02-2026 15:51:40.932 [main] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.notify - Saw local status change event StatusChangeEvent [timestamp=1772274100932, current=UP, previous=STARTING]
+28-02-2026 15:51:40.937 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020: registering service...
+28-02-2026 15:51:40.941 [main] [-] INFO  order-service-o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-9020"]
+28-02-2026 15:51:41.041 [main] [-] INFO  order-service-o.s.boot.tomcat.TomcatWebServer.start - Tomcat started on port 9020 (http) with context path '/orders'
+28-02-2026 15:51:41.046 [main] [-] INFO  order-service-o.s.c.n.e.s.EurekaAutoServiceRegistration.onApplicationEvent - Updating port to 9020
+28-02-2026 15:51:41.150 [main] [-] INFO  order-service-c.m.o.OrderServiceApplication.logStarted - Started OrderServiceApplication in 37.683 seconds (process running for 39.721)
+28-02-2026 15:51:41.158 [DiscoveryClient-InstanceInfoReplicator-%d] [-] INFO  order-service-c.netflix.discovery.DiscoveryClient.register - DiscoveryClient_ORDER-SERVICE/DESKTOP-H3FHSHP.mshome.net:order-service:9020 - registration status: 204
+28-02-2026 15:56:39.839 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:01:39.945 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:06:40.034 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:11:40.143 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:16:40.213 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:21:40.308 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:26:40.452 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:31:40.523 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:36:40.610 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:41:40.712 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:46:40.819 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:51:40.956 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 16:56:41.060 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:01:41.158 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:06:41.308 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:11:41.425 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:16:41.537 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:21:41.647 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:26:41.726 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:31:41.805 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:36:41.897 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:41:41.969 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:46:42.031 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:51:42.098 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 17:56:42.167 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:01:42.240 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:06:42.346 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:11:42.483 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:16:42.577 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:21:42.678 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:26:42.741 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:31:42.819 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:36:42.895 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:41:42.965 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:46:43.013 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:51:43.139 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 18:56:43.226 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:01:43.273 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:06:43.355 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:11:43.478 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:16:43.542 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:21:43.587 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:26:43.682 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:31:43.780 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:36:43.938 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:41:44.015 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:46:44.124 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:51:44.232 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 19:56:44.358 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 20:01:44.447 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 20:06:44.557 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 20:11:44.662 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 20:16:44.824 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 20:21:44.938 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 20:26:45.060 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 20:58:48.964 [HikariPool-1:housekeeper] [-] WARN  order-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m17s30ms428µs).
+28-02-2026 22:56:59.123 [HikariPool-1:housekeeper] [-] WARN  order-service-com.zaxxer.hikari.pool.HikariPool.run - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h58m9s913ms162µs600ns).
+28-02-2026 22:57:25.536 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:02:25.759 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:07:25.872 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:12:25.960 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:17:26.048 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:22:26.155 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:27:26.239 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:32:26.332 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:37:26.457 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:42:26.551 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:47:26.581 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:52:26.666 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
+28-02-2026 23:57:26.716 [AsyncResolver-bootstrap-executor-%d] [-] INFO  order-service-c.n.d.s.r.aws.ConfigClusterResolver.getClusterEndpoints - Resolving eureka endpoints via configuration
