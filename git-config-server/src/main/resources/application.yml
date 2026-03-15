@@ -7,7 +7,7 @@ spring:
         git:
           uri: https://github.com/Bhargav124812/git-configs
           username: Bhargav124812
-          password: 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
+          password: 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
           default-label: master
 
 server:
@@ -15,4 +15,4 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://eureka:8761/eureka

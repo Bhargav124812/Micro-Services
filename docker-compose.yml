@@ -1,0 +1,89 @@
+
+
+services:
+  zipkin:
+    image: openzipkin/zipkin:latest
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - ecommerce-network
+
+  order-db:
+    image: postgres
+    container_name: order-db
+    environment:
+      - POSTGRES_DB=orderDB
+      - POSTGRES_USER=bhargav
+      - POSTGRES_PASSWORD=password
+    networks:
+      - ecommerce-network
+    volumes:
+      - order-db-data:/var/lib/postgresql
+
+
+  inventory-db:
+    image: postgres
+    container_name: inventory-db
+    environment:
+      - POSTGRES_DB=inventoryDB
+      - POSTGRES_USER=bhargav
+      - POSTGRES_PASSWORD=password
+    networks:
+      - ecommerce-network
+    volumes:
+      - inventory-db-data:/var/lib/postgresql
+
+  eureka:
+    image: bhargav2856/eureka
+    container_name: eureka
+    networks:
+      - ecommerce-network
+
+  git-config-server:
+    image: bhargav2856/git-config-server
+    container_name: git-config-server
+    networks:
+      - ecommerce-network
+    depends_on:
+      - eureka
+
+  inventory-service:
+    image: bhargav2856/inventory-service
+    container_name: inventory-service
+    networks:
+      - ecommerce-network
+    depends_on:
+      - git-config-server
+      - zipkin
+      - inventory-db
+
+  order-service:
+    image: bhargav2856/order-service
+    container_name: order-service
+    networks:
+      - ecommerce-network
+    depends_on:
+      - git-config-server
+      - zipkin
+      - order-db
+
+
+  api-gateway:
+    image: bhargav2856/api-gateway
+    container_name: api-gateway
+    networks:
+      - ecommerce-network
+    depends_on:
+      - order-service
+      - inventory-service
+    ports:
+      - "8080:8080"
+
+volumes:
+  order-db-data:
+  inventory-db-data:
+
+
+networks:
+  ecommerce-network:
